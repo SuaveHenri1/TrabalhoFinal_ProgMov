@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D2B48C"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txtSaldoArmazem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moedas: 0"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:fontFamily="@font/pixel_font"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSementes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="#FFF8DC"
+        app:layout_constraintTop_toBottomOf="@id/txtSaldoArmazem">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtSementesEstoque"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sementes de Cenoura: 0"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/pixel_font"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnComprarSemente"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                android:text="Comprar (5g)"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/botao_verde"
+                android:fontFamily="@font/pixel_font"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCenouras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="12dp"
+        app:cardBackgroundColor="#FFF8DC"
+        app:layout_constraintTop_toBottomOf="@id/cardSementes">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtCenourasEstoque"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cenouras Colhidas: 0"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/pixel_font"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVenderCenoura"
+                android:layout_width="220dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                android:text="Vender (10g)"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/botao_vermelho"
+                android:fontFamily="@font/pixel_font"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnVoltarFazenda"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:text="Voltar à Terra"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/botao_madeira"
+        android:fontFamily="@font/pixel_font"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
